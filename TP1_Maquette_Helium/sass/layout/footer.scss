@@ -1,0 +1,28 @@
+footer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px;
+    height: 100%;
+}
+.btn-container{
+    display: flex;
+    flex-direction: column;
+}
+.partner{
+    width: 70%;
+}
+
+.img-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    
+    align-items: center;
+    & img{
+        height: 45px;
+    }
+}

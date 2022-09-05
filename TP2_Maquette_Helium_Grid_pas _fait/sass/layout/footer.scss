@@ -1,0 +1,27 @@
+footer{
+    margin-top: 50px;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20% 66%;
+}
+.btn-container{
+ display: grid;
+ grid-template-columns: 33% 33% 33%;
+}
+.partner{
+    display: grid;
+    align-items: center;
+    height: 86%;
+}
+
+.img-container{
+    grid-template-columns: 33% 33% 33%;
+    height: 80%;
+    
+    & img{
+        height: 45px;
+    }
+}

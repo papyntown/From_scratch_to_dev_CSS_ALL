@@ -1,0 +1,29 @@
+section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+article{
+    width: 50%;
+   
+}
+.contain-image{
+    width: 45%;
+    text-align: end;
+}
+#main-image{
+    width: 100%;
+   
+}
+h1{
+    font-size: 5rem;
+}
+#slogan{
+    color:$slogancolor;
+    font-size: 1.8rem;
+    margin: 10px 0px;
+}
+p{
+    font-size: 0.8rem;
+}

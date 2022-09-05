@@ -1,0 +1,14 @@
+body{
+    display: flex; // permet de centrer
+    align-items: center;//permet de centrer verticalement si display flex
+    justify-content: center;//permet de centrer horizontalement si display flex
+    overflow: hidden;
+}
+.card{
+    background: rgba(0, 0, 0, 0.432);
+    width: calc(100% - 50px);
+    padding: 20px 20px 6px;
+    box-shadow: 7px 11px 11px #0000007d;
+    border-radius: 10px;
+    //backdrop-filter: blur(10px); //met un effet de flou derrier lui attention pas tout les navigateur l'on
+}

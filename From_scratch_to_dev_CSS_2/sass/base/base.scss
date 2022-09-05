@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../../bg.jpg) center/cover;
+    height: 100vh; //grace à ça il prend tout l'ecran et donc ne se repete pas
+    color: $couleur1;
+}

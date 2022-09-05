@@ -1,0 +1,28 @@
+.e-mail{
+    text-align: center;
+    margin-bottom: 20px;
+    
+        & input{ //je parle juste a l'input qui est dans ma classe mail
+        padding: 10px;
+        border-radius: 7px;
+        outline: none;
+        border: 3px solid transparent; // cela permet de creer une bordure qui prend dèja la place voulue de 3px
+        transition: 0.3s;
+        text-align: center;
+        font-size: 1.1rem;
+        color:$couleur1;
+        width: 35%;
+        max-width: 300px; //empeche d'etre trop gros
+        min-width: 160px; // et trop petit en fonction de l'écran
+
+        &[type="text"]:focus{ // la je suis sur de parler a l'input text  focus pour des que je clique dessus
+            background: transparent;
+            border: 3px solid $couleur2; // je fais apparaitre la border dèja creer 
+            border-radius: 20px;
+            font-size: 1.2rem;
+        }
+        &[type="text"]::placeholder{
+            color: $couleur2;
+        }
+    }
+}

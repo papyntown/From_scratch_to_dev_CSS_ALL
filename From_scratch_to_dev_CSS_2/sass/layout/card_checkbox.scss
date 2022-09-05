@@ -1,0 +1,55 @@
+.checkbox-conteiner{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0  30px;
+    perspective: 100px;
+}
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"]:checked + label { //+ veut dire tu agit sur et ~ agit sur touts les
+    background-color: $couleur2;
+    color: $couleur3;
+    transform: scale(1.10); //une taille normal c'est 1 donc la en mettant 1.10 j'augmente de 10% sa taille
+}
+label{
+    cursor: pointer;
+    border: 1px solid $couleur1;
+    background: $couleur3;
+    padding: 8px;
+    border-radius: 5px ;
+    transition: 0.2s;
+    user-select: none;//il ne peut pas selectionner le texte du bouton
+
+    &:first-of-type:hover //Si le premier label et survolé alors
+        {
+            animation: label_1 2s infinite linear ; // joue a l'infini linear donne un effet
+        }
+    }
+@keyframes label_1 {
+    50%{ //a la moitier de ton animation je veux que tu fasse :
+        transform: scale(1.4);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+label:nth-child(4):hover{
+    animation: label_2 2s linear; 
+}
+/* Ne pas oublier perspective sur le parent pour de l'anim 3D c'est un truc a marquer de 0 à 1000 voir checkboc container*/
+@keyframes label_2
+{
+    33%{
+        transform: translateZ(30px) rotate(-360deg); //positif c'est qu'il va vers l'avant donc vers toi
+    }
+    66%{
+        transform: translateZ(-40px) rotate(360deg) ;//negatif vers l'arriere donc a l'oposser de toi il te fuit
+        
+    }
+    100%{
+        transform: translateZ(0px) rotate(0deg);
+        
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "tp5_maquette_gaming_campus",
+  "version": "1.0.0",
+  "description": "Toto fait n'imp avec des maquettes",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./sass/main.scss:./styles/style.css"
+  },
+  "author": "anto",
+  "license": "ISC"
+}

@@ -1,0 +1,20 @@
+input[type="submit"]{
+    display: block; //block pour centrer mon element avec width
+    cursor: pointer;
+    background: $couleur2;
+    border: none;
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    border-radius: 150px;
+    margin: 0 auto;
+    transition: 0.5s; // il faut mettre la transition dans le parent pour l'avoir quand on fait une action mais AUSSI quand on en sort
+    &:hover
+    {
+        letter-spacing: 3px;
+    }
+    &:active //si tu clique
+    {
+        transform: scale(1.2);
+    }
+}
+

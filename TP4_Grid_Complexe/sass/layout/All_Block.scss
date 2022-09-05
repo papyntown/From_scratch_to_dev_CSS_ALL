@@ -1,0 +1,40 @@
+form
+{
+    display: grid;
+    /* on veut avoir prenom et nom cote à cote et la text area en dessus */
+    grid-template-columns: 1fr 1fr 1fr; /*1 fraction */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "jaune jaune violet"/*input 1 ET INPUT 2*/
+    "rouge vert violet" /* text area */
+    "rouge rose rose"/* bouton */
+    ;
+    height: 100%;
+}
+div{
+    margin: 20px; // il exsite aussi gap que tu peux mettre sur le display grid au dessus il creer un espace seulement entre les grids
+}
+div:nth-child(1){
+    background-color: $bloc1; 
+    grid-area: jaune;
+    
+}
+
+div:nth-child(2){
+    background-color: $bloc2;    
+    grid-area: violet;
+  
+}
+
+div:nth-child(3){
+    background-color: $bloc3; 
+    grid-area: vert;   
+}
+div:nth-child(4){
+    background-color: $bloc4;   
+    grid-area: rouge; 
+}
+div:nth-child(5){
+    background-color: $bloc5;  
+    grid-area: rose;  
+}

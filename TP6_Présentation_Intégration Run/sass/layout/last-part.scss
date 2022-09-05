@@ -1,0 +1,13 @@
+.bottom{
+    display: grid;
+    grid-template-columns: 65% 35%;
+    align-items: center;
+    .bottom-left-part{
+        margin-left: 5%;
+        p{
+            margin-top: 30px;
+            line-height: 2rem;   
+            margin-bottom: 20px;
+        } 
+    }
+}

@@ -1,0 +1,21 @@
+section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+
+
+#main-image{ //il faut lui enlever le container en grid
+    width: 100%;  
+}
+h1{
+    font-size: 5rem;
+}
+#slogan{
+    color:$slogancolor;
+    font-size: 1.8rem;
+    margin: 10px 0px;
+}
+p{
+    font-size: 0.8rem;
+}

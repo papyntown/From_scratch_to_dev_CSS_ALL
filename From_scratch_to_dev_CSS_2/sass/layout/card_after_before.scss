@@ -1,0 +1,56 @@
+.card:before{
+    content: "oh une étoile \2730"; //2730 un code html pour une étoile
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    font-size: 2.4rem;
+}
+h1{
+    margin-bottom: 24px;
+    position: relative; //permet de positionner mon h1 after pour après (la barre rose)
+}
+h1::after{
+    content:"";
+    position: absolute;
+    background-color: $couleur2;
+    height: 1px;
+    width: 100%; //fait 100% de la taille de son parent
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    animation: h1anim 5s ease-in-out forwards; //ease in out =lent au debut lent a la fin
+    transform-origin: center;
+}
+@keyframes h1anim { //Je veux que tu aille de ce que tu est jusqu'a tranform scaleX(1)
+    to{ // on peut dire aussi 100%
+        transform: translateX(-50%) scaleX(1);
+    }
+    
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.polygon{
+    clip-path: polygon(50% 0%,100% 50%,50% 100%, 0% 50%); // Clippy sur internet tu peux faire ce que tu veux en polygone
+    background: linear-gradient(135deg,$couleur2 0%,$couleur1 100%); //web gradiant y'a des supper gradien
+    height: 100px;
+    width: 100px;
+
+}
+.polygon-conteiner{
+     place-self: center left; // si le parent est en grid et fait ça et c'est centrer
+    filter: drop-shadow(-1px 6px 3px $couleur3); // creér une ombre comme le poligon
+}
+.polygon:after{
+    content: "Un texte";
+    position: absolute;
+    color: $couleur2;
+    background: $couleur4;
+    top: 50%; // pour centrer un absolute
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 90px;
+    padding: 10px;
+    text-align: center;
+}

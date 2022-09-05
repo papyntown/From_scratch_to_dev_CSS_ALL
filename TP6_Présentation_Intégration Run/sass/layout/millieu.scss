@@ -1,0 +1,14 @@
+.center{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    align-items: center;
+    .center-right-part{
+        
+        margin-left: 5%;
+       p{
+        margin-top: 30px;
+        line-height: 2rem;   
+        margin-bottom: 20px;
+        } 
+    }
+}

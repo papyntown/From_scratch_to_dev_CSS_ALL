@@ -1,0 +1,52 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  margin: auto;
+  width: 95%;
+  height: 100vh;
+}
+
+form {
+  display: grid;
+  /* on veut avoir prenom et nom cote à cote et la text area en dessus */
+  grid-template-columns: 1fr 1fr 1fr; /*1 fraction */
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "jaune jaune violet" "rouge vert violet" "rouge rose rose";
+  height: 100%;
+}
+
+div {
+  margin: 20px;
+}
+
+div:nth-child(1) {
+  background-color: yellow;
+  grid-area: jaune;
+}
+
+div:nth-child(2) {
+  background-color: purple;
+  grid-area: violet;
+}
+
+div:nth-child(3) {
+  background-color: green;
+  grid-area: vert;
+}
+
+div:nth-child(4) {
+  background-color: red;
+  grid-area: rouge;
+}
+
+div:nth-child(5) {
+  background-color: orchid;
+  grid-area: rose;
+}
+
+/*# sourceMappingURL=stYle.css.map */

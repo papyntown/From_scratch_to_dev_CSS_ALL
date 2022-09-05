@@ -1,0 +1,32 @@
+.contact-medias{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    justify-content: space-between;
+    
+    &::before{
+        content: "";
+        position: absolute;
+
+        width: 100%;
+        bottom: 80px;
+        border-top: 1px solid #8080804a;
+
+    }
+    & h3{
+        text-transform: uppercase;
+        font-weight: bolder;
+        margin-bottom: 20px;
+    }
+    & p{
+        font-weight: bolder;
+    }
+    & .medias-logos{
+        display: flex;
+        align-items: center;
+        width: 70%;
+        justify-content: space-between;
+    }
+    
+}

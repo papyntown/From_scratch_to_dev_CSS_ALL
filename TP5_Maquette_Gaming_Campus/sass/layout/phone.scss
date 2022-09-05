@@ -1,0 +1,47 @@
+@media screen and (max-width: 720px) {
+    nav{
+        display: none;
+    }
+    .background-header{
+        background: url(../../assets/img/bg.jpg) cover;
+    }
+    #logo{
+        img{
+            width: 80%;
+        }
+    }    
+    header{
+        width: 80%;
+        margin:auto;
+        padding: 50px 0px 100px;
+     
+        & .main-header{
+            text-align: center;
+            & h1{
+                font-family: "font-1";
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .header-text{
+        width: 90%;
+        font-family: "font-1";
+        font-size: 0.8rem;
+    }
+    .icon-part{
+
+        height: 100%;
+        padding: 20px 0px;
+
+        & .icon-part-container{
+            flex-direction: column;
+        }
+    }
+     .header-news{
+        width: 90%;
+        flex-direction: column;
+     }
+     .main-news-conteiner{
+        display: block;
+     }
+}

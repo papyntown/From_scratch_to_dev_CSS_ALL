@@ -1,0 +1,11 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 50px;
+}
+.nav-bar-li{
+    display: flex;
+    justify-content: inherit;
+    width: 50%;
+}

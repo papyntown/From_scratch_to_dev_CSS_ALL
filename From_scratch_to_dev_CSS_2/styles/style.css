@@ -1,0 +1,294 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../bg.jpg) center/cover;
+  height: 100vh;
+  color: #ede4d0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.432);
+  width: calc(100% - 50px);
+  padding: 20px 20px 6px;
+  box-shadow: 7px 11px 11px rgba(0, 0, 0, 0.4901960784);
+  border-radius: 10px;
+}
+
+.card:before {
+  content: "oh une étoile ✰";
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  font-size: 2.4rem;
+}
+
+h1 {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  background-color: pink;
+  height: 1px;
+  width: 100%;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  animation: h1anim 5s ease-in-out forwards;
+  transform-origin: center;
+}
+
+@keyframes h1anim {
+  to {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.polygon {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  background: linear-gradient(135deg, pink 0%, #ede4d0 100%);
+  height: 100px;
+  width: 100px;
+}
+
+.polygon-conteiner {
+  place-self: center left;
+  filter: drop-shadow(-1px 6px 3px #393b4b);
+}
+
+.polygon:after {
+  content: "Un texte";
+  position: absolute;
+  color: pink;
+  background: rgb(18, 19, 19);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 90px;
+  padding: 10px;
+  text-align: center;
+}
+
+p {
+  line-height: 26px;
+  margin: 20px 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-align: justify;
+}
+
+p::selection {
+  background: pink;
+  color: #393b4b;
+}
+
+.checkbox-conteiner {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 30px;
+  perspective: 100px;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked + label {
+  background-color: pink;
+  color: #393b4b;
+  transform: scale(1.1);
+}
+
+label {
+  cursor: pointer;
+  border: 1px solid #ede4d0;
+  background: #393b4b;
+  padding: 8px;
+  border-radius: 5px;
+  transition: 0.2s;
+  user-select: none;
+}
+label:first-of-type:hover {
+  animation: label_1 2s infinite linear;
+}
+
+@keyframes label_1 {
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+label:nth-child(4):hover {
+  animation: label_2 2s linear;
+}
+
+/* Ne pas oublier perspective sur le parent pour de l'anim 3D c'est un truc a marquer de 0 à 1000 voir checkboc container*/
+@keyframes label_2 {
+  33% {
+    transform: translateZ(30px) rotate(-360deg);
+  }
+  66% {
+    transform: translateZ(-40px) rotate(360deg);
+  }
+  100% {
+    transform: translateZ(0px) rotate(0deg);
+  }
+}
+.e-mail {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.e-mail input {
+  padding: 10px;
+  border-radius: 7px;
+  outline: none;
+  border: 3px solid transparent;
+  transition: 0.3s;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #ede4d0;
+  width: 35%;
+  max-width: 300px;
+  min-width: 160px;
+}
+.e-mail input[type=text]:focus {
+  background: transparent;
+  border: 3px solid pink;
+  border-radius: 20px;
+  font-size: 1.2rem;
+}
+.e-mail input[type=text]::placeholder {
+  color: pink;
+}
+
+input[type=submit] {
+  display: block;
+  cursor: pointer;
+  background: pink;
+  border: none;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  border-radius: 150px;
+  margin: 0 auto;
+  transition: 0.5s;
+}
+input[type=submit]:hover {
+  letter-spacing: 3px;
+}
+input[type=submit]:active {
+  transform: scale(1.2);
+}
+
+input[type=submit]:hover + a {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+a {
+  display: block;
+  color: pink;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s;
+  visibility: hidden;
+}
+
+a:visited {
+  color: #ede4d0;
+}
+
+#spaceship {
+  position: absolute;
+  height: 40px;
+  filter: drop-shadow(0px 6px 3px rgba(255, 255, 0, 0.6));
+  z-index: -1;
+  animation: spaceship 30s infinite linear;
+}
+
+@keyframes spaceship {
+  0% {
+    top: 2%;
+    left: 2%;
+    transform: rotate(90deg);
+  }
+  10% {
+    top: 6%;
+    left: 30%;
+    transform: rotate(96deg);
+  }
+  20% {
+    top: 9%;
+    left: 60%;
+    transform: rotate(60deg);
+  }
+  30% {
+    top: 0%;
+    left: 80%;
+    transform: rotate(90deg);
+  }
+  40% {
+    top: 20%;
+    left: 110%;
+    transform: rotate(110deg);
+  }
+  50% {
+    top: 50%;
+    left: 80%;
+    transform: rotate(323deg);
+  }
+  60% {
+    top: 110%;
+    left: 90%;
+    transform: rotate(256deg);
+  }
+  70% {
+    top: 85%;
+    left: 50%;
+    transform: rotate(237deg);
+  }
+  80% {
+    top: 50%;
+    left: 30%;
+    transform: rotate(323deg);
+  }
+  90% {
+    top: 20%;
+    left: 15%;
+    transform: rotate(350deg);
+  }
+  100% {
+    top: 2%;
+    left: 2%;
+    transform: rotate(90deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

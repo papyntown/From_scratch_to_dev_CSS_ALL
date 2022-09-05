@@ -1,0 +1,55 @@
+
+nav{
+    margin:  20px auto;
+    width: 80%;
+    
+    & ul
+    {   cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        text-transform: uppercase;
+        
+        
+        & .barre_du_haut
+    {
+            position: relative;
+            
+            & li:hover:before{
+                content: "";
+                position: absolute;
+                height: 4px;
+                width: 100%;
+                bottom: 40px;
+                border-top: 40px solid blueviolet;
+                transform: scaleX(1);
+                animation: selection 0.7s ease-in-out forwards;
+                
+              }
+
+            & li:hover{
+                color: blueviolet;
+                transform: translateY(4px);
+                
+            }
+            
+            @keyframes selection 
+        {
+            100%{
+                transform: scaleX(1);
+                
+            }
+            
+        }
+    
+    }
+}
+    & #language{
+        border-radius: 20px;
+        padding: 7px 14px 7px 14px;
+        background-color: #b6aeae85; 
+    }
+}
+li{
+    transition: 0.4s;
+}

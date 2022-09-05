@@ -1,0 +1,19 @@
+input[type="submit"]:hover + a //si on survole le bouton le lien va :
+{ 
+opacity: 1;
+transform: translateY(0);
+visibility: visible;
+}
+
+a{
+    display: block;
+    color: $couleur2;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);//il translate (se déplace de 20 px vers le bas)
+    transition: 0.4s;
+    visibility: hidden;
+}
+a:visited{
+    color: $couleur1;
+}

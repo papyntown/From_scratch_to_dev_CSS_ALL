@@ -1,0 +1,29 @@
+header{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    position: relative;
+
+
+    .left-part{
+        margin-left: 5%;
+        margin-right: 5%;
+        p{
+            margin-top: 30px;
+            line-height: 2rem;   
+            margin-bottom: 20px;
+        } 
+        &::after{
+            content: "";
+            border-bottom: 2px solid rgb(0, 255, 128);
+            height: 4px;
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            z-index: -1;
+        }
+
+    }
+
+
+}

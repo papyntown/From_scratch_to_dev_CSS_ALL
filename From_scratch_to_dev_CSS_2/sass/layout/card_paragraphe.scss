@@ -1,0 +1,13 @@
+p{
+    line-height: 26px;
+    margin: 20px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-align: justify;
+}
+p::selection{
+    background: $couleur2;
+    color: $couleur3;
+}
