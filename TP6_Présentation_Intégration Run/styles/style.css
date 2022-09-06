@@ -1,18 +1,99 @@
-/* Error: Expected expression.
- *    ,
- * 31 |            flex-wrap: ;
- *    |                       ^
- *    '
- *   sass\layout\header.scss 31:23  @import
- *   sass\main.scss 4:9             root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a    \2577 \a 31 \2502             flex-wrap: ;\d\a    \2502                        ^\a    \2575 \a   sass\\layout\\header.scss 31:23  @import\a   sass\\main.scss 4:9             root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+img {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url(../../styles/SourceSansPro-Light.ttf);
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+button {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.484);
+  letter-spacing: 1px;
+  border-radius: 20px;
+  padding: 10Px 30px;
+  color: black;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+header .left-part {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+header .left-part h1 {
+  font-size: 54px;
+  font-weight: 200;
+}
+header .left-part p {
+  margin-top: 30px;
+  line-height: 36px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+header .left-part::after {
+  content: "";
+  border-bottom: 2px solid rgb(0, 255, 128);
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  z-index: -1;
+}
+header .right-part {
+  width: 100%;
+  height: 100%;
+}
+header .right-part .img-right-part {
+  background: url(../../img/banner.jpg) right center/cover;
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  align-items: center;
+}
+.center .center-right-part {
+  margin-left: 5%;
+}
+.center .center-right-part p {
+  margin-top: 30px;
+  line-height: 2rem;
+  margin-bottom: 20px;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  align-items: center;
+}
+.bottom .bottom-left-part {
+  margin-left: 5%;
+}
+.bottom .bottom-left-part p {
+  margin-top: 30px;
+  line-height: 2rem;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
